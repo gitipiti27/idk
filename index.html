@@ -60,7 +60,7 @@
             opacity: 0.7;
         }
 
-        /* Glowing cursor follower */
+     
         .cursor-glow {
             position: fixed;
             top: 0;
@@ -76,7 +76,7 @@
             transition: transform 0.06s linear;
         }
 
-        /* Ego boost button */
+  
         .ego-btn {
             display: block;
             margin: 25px auto 0;
@@ -106,10 +106,10 @@
 </head>
 <body>
 
-    <!-- Glowing cursor element -->
+   
     <div class="cursor-glow"></div>
 
-    <!-- WELCOME -->
+  
     <div class="section">
         <h1 class="neon">Player Profile: You</h1>
         <p style="text-align:center; opacity:0.85;">
@@ -117,7 +117,7 @@
         </p>
     </div>
 
-    <!-- OVERVIEW -->
+  
     <div class="section">
         <h2 class="neon">Character Overview</h2>
         <div class="card">
@@ -134,7 +134,6 @@
         </div>
     </div>
 
-    <!-- SKILL TREE -->
     <div class="section">
         <h2 class="neon">Skill Tree</h2>
         <div class="card">
@@ -148,7 +147,7 @@
         </div>
     </div>
 
-    <!-- INVENTORY -->
+    
     <div class="section">
         <h2 class="neon">Inventory</h2>
         <div class="card">
@@ -170,7 +169,6 @@
         </div>
     </div>
 
-    <!-- ACHIEVEMENTS -->
     <div class="section">
         <h2 class="neon">Achievements</h2>
         <div class="card">
@@ -183,7 +181,7 @@
         </div>
     </div>
 
-    <!-- PARTY BUFFS -->
+    
     <div class="section">
         <h2 class="neon">Party Buffs</h2>
         <div class="card">
@@ -201,7 +199,7 @@
         </div>
     </div>
 
-    <!-- LOADING TIPS -->
+
     <div class="section">
         <h2 class="neon">Loading Screen Tips</h2>
         <div class="card">
@@ -215,7 +213,7 @@
         </div>
     </div>
 
-    <!-- MESSAGE + EGO BOOST BUTTON -->
+  
     <div class="section">
         <h2 class="neon">A Small Message</h2>
         <div class="card">
@@ -230,7 +228,7 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
+  
     <div class="footer">
         QUEST COMPLETE ✦  
         <br> Please refill your HP and respawn soon.
@@ -248,9 +246,8 @@
             cursorGlow.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
         });
 
-        // Click sound effect
-        // Put a file named "click.mp3" in the same folder as this HTML
-        const clickSound = new Audio('click.mp3');
+     
+        const clickSound = new Audio('sound.wav');
         clickSound.volume = 0.35;
 
         document.addEventListener('click', () => {
@@ -258,7 +255,6 @@
             clickSound.play().catch(() => {});
         });
 
-        // Ego boost button logic
         const egoBtn = document.getElementById('egoBtn');
         const egoText = document.getElementById('egoText');
 
@@ -286,3 +282,4 @@
 </body>
 
 </html>
+
