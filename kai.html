@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Profile — You</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Orbitron", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #151530 0, #050509 55%);
+            color: #e0e0ff;
+            overflow-x: hidden;
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .neon {
+            color: #7df9ff;
+            text-shadow: 0 0 8px #7df9ff, 0 0 16px #7df9ff;
+        }
+
+        .card {
+            background: rgba(12, 12, 26, 0.85);
+            padding: 20px;
+            border-radius: 14px;
+            margin-top: 20px;
+            border: 1px solid rgba(125, 249, 255, 0.25);
+            box-shadow: 0 0 18px rgba(1, 193, 222, 0.2);
+            transition: all 0.15s ease-out;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(125, 249, 255, 0.35);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        /* Glowing cursor follower */
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            pointer-events: none;
+            background: radial-gradient(circle, rgba(125,249,255,0.9) 0, rgba(125,249,255,0.1) 45%, transparent 70%);
+            mix-blend-mode: screen;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            transition: transform 0.06s linear;
+        }
+
+        /* Ego boost button */
+        .ego-btn {
+            display: block;
+            margin: 25px auto 0;
+            padding: 12px 26px;
+            border-radius: 999px;
+            border: 1px solid rgba(125,249,255,0.6);
+            background: linear-gradient(120deg, #071824, #102635);
+            color: #e0e0ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 12px;
+            cursor: pointer;
+            box-shadow: 0 0 12px rgba(125,249,255,0.4);
+        }
+
+        .ego-btn:hover {
+            box-shadow: 0 0 18px rgba(125,249,255,0.7);
+            transform: translateY(-1px);
+        }
+
+        .ego-text {
+            margin-top: 15px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Glowing cursor element -->
+    <div class="cursor-glow"></div>
+
+    <!-- WELCOME -->
+    <div class="section">
+        <h1 class="neon">Player Profile: You</h1>
+        <p style="text-align:center; opacity:0.85;">
+            Rare Character Unlocked ✦
+        </p>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="section">
+        <h2 class="neon">Character Overview</h2>
+        <div class="card">
+            <ul>
+                <li><strong>Name:</strong> You</li>
+                <li><strong>Class:</strong> Overworked Protagonist</li>
+                <li><strong>Level:</strong> Rising, even on the days it doesn’t feel like it</li>
+                <li><strong>Alignment:</strong> Protective • Observant • Responsible</li>
+            </ul>
+            <p>
+                You carry heavy missions silently. You endure, adapt and keep going even when your HP is low.  
+                This profile exists because I need you to see yourself at least once the way I see you every day.
+            </p>
+        </div>
+    </div>
+
+    <!-- SKILL TREE -->
+    <div class="section">
+        <h2 class="neon">Skill Tree</h2>
+        <div class="card">
+            <strong>Maxed Out Skills:</strong>
+            <ul>
+                <li>• Work Ethic — you keep pushing through exhaustion like it's normal</li>
+                <li>• Observation — you understand things people never say out loud</li>
+                <li>• Stability — you handle chaos with a calm most people don’t have</li>
+                <li>• Composure — you stay collected even when your mind is overloaded</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- INVENTORY -->
+    <div class="section">
+        <h2 class="neon">Inventory</h2>
+        <div class="card">
+            <strong>Currently Equipped:</strong>
+            <ul>
+                <li>• Responsibility</li>
+                <li>• Hoodie of Eternal Tiredness</li>
+                <li>• Emotional Control</li>
+                <li>• Quiet Kindness (even if you don’t call it that)</li>
+            </ul>
+
+            <strong>Missing Items:</strong>
+            <ul>
+                <li>• Rest that actually feels like rest</li>
+                <li>• Peace, not just silence</li>
+                <li>• A day without pressure on your shoulders</li>
+                <li>• Someone reminding you you’re already doing enough</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="section">
+        <h2 class="neon">Achievements</h2>
+        <div class="card">
+            <ul>
+                <li>🏆 Still Standing — you’ve survived levels that would break most players</li>
+                <li>🏆 Quiet Hero — you help people more than you admit</li>
+                <li>🏆 Hardwork Overdrive — you give your all even when you feel empty</li>
+                <li>🏆 Emotional Balance: Rebuild Pending — and still, you show up</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- PARTY BUFFS -->
+    <div class="section">
+        <h2 class="neon">Party Buffs</h2>
+        <div class="card">
+            When you join the lobby:
+            <ul>
+                <li>+ Calm</li>
+                <li>+ Stability</li>
+                <li>+ Logic</li>
+                <li>+ Safety</li>
+                <li>+ Quiet reassurance</li>
+            </ul>
+            <p>
+                Even when you feel nothing inside, other people feel more grounded just because you’re there.
+            </p>
+        </div>
+    </div>
+
+    <!-- LOADING TIPS -->
+    <div class="section">
+        <h2 class="neon">Loading Screen Tips</h2>
+        <div class="card">
+            <ul>
+                <li>• You don’t give yourself enough credit.</li>
+                <li>• Being tired doesn’t make you weak.</li>
+                <li>• You’re allowed to rest without earning it.</li>
+                <li>• You’re still moving forward, even when it feels like you’re stuck.</li>
+                <li>• You are not replaceable, no matter what your mind tells you.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MESSAGE + EGO BOOST BUTTON -->
+    <div class="section">
+        <h2 class="neon">A Small Message</h2>
+        <div class="card">
+            <p>
+                You might not see it, but you have a kind of strength most people never build.  
+                You keep carrying everything, you keep showing up, and you almost never ask for anything back.  
+                I just want you to know that, to me, you are genuinely someone worth appreciating.
+            </p>
+
+            <button id="egoBtn" class="ego-btn">Press for ego boost</button>
+            <div id="egoText" class="ego-text" style="display:none;"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        QUEST COMPLETE ✦  
+        <br> Please refill your HP and respawn soon.
+    </div>
+
+    <!-- SOUND + CURSOR + EGO SCRIPT -->
+    <script>
+        // Glowing cursor follow
+        const cursorGlow = document.querySelector('.cursor-glow');
+        let mouseX = 0, mouseY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorGlow.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+
+        // Click sound effect
+        // Put a file named "click.mp3" in the same folder as this HTML
+        const clickSound = new Audio('click.mp3');
+        clickSound.volume = 0.35;
+
+        document.addEventListener('click', () => {
+            clickSound.currentTime = 0;
+            clickSound.play().catch(() => {});
+        });
+
+        // Ego boost button logic
+        const egoBtn = document.getElementById('egoBtn');
+        const egoText = document.getElementById('egoText');
+
+        const egoLines = [
+            "You’re doing so much better than you think you are.",
+            "You don’t see it, but you’re one of the strongest people I know.",
+            "You make things feel safer just by being there.",
+            "You’re allowed to take up space in this world exactly as you are.",
+            "You’re not a burden. You’re a presence people rely on.",
+            "You’ve survived every bad day so far. That’s not nothing.",
+            "You matter more than your brain will ever admit to you.",
+            "I genuinely respect the way you keep going, even when no one sees it."
+        ];
+
+        let egoIndex = 0;
+
+        egoBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // so it doesn't double-trigger audio weirdly
+            egoText.style.display = 'block';
+            egoText.textContent = egoLines[egoIndex];
+            egoIndex = (egoIndex + 1) % egoLines.length;
+        });
+    </script>
+
+</body>
+</html>
